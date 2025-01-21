@@ -966,6 +966,7 @@ const Home = ({data}) => {
                   margin: "10px 0",
                   fontFamily: "'Inter', sans-serif",
                   color: "#717171",
+                  opacity:'90%'
                 }}
               >
                 {item.title}

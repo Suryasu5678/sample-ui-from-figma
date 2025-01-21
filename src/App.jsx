@@ -9,7 +9,7 @@ const App = () => {
   const data = [
     {
       id: 1,
-      image: img18, 
+      image: img18,
       title: "Creating Streamlined Safeguarding Processes with OneRen",
       linkText: "Readmore →",
       linkUrl: "#",
@@ -17,16 +17,14 @@ const App = () => {
     {
       id: 2,
       image: img19,
-      title:
-        "What are your safeguarding responsibilities and how can you manage them?",
+      title: "Creating Streamlined Safeguarding Processes with OneRen",
       linkText: "Readmore →",
       linkUrl: "#",
     },
     {
       id: 3,
       image: img20,
-      title:
-        "What are your safeguarding responsibilities and how can you manage them?",
+      title: "Creating Streamlined Safeguarding Processes with OneRen",
       linkText: "Readmore →",
       linkUrl: "#",
     },

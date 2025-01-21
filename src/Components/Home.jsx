@@ -25,9 +25,8 @@ const Home = () => {
           height: "416px",
           fontFamily: "'Inter', sans-serif",
           lineHeight: "52.9px",
-          display: "flex",      
+          display: "flex",
 
-          
           alignItems: "center",
           width: "100%",
           justifyContent: "space-between",
@@ -77,12 +76,22 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <img
-          src={computerpic}
-          style={{
-            height: "283.3px",
-          }}
-        />
+        <img src={computerpic} className="responsive-img" alt="computer" />
+
+        <style jsx>{`
+          .responsive-img {
+            height: 283.3px;
+            width: 100%;
+            object-fit: cover;
+          }
+
+          @media (max-width: 768px) {
+            .responsive-img {
+              height: auto;
+              max-width: 40%;
+            }
+          }
+        `}</style>
       </div>
       <div
         style={{
@@ -121,7 +130,7 @@ const Home = () => {
             whiteSpace: "nowrap",
             fontFamily: "'Inter', sans-serif",
             color: "#717171",
-            textAlign: "center",
+            textAlign: "center",flexWrap:'wrap'
           }}
         >
           We have been working with some Fortune 500+ clients
@@ -233,7 +242,7 @@ const Home = () => {
             </div>
             <p
               style={{
-                fontSize: "18px",
+                fontSize: "15px",
                 fontWeight: 400,
                 fontFamily: "'Inter', sans-serif",
                 color: "#717171",
@@ -267,7 +276,7 @@ const Home = () => {
             </div>
             <p
               style={{
-                fontSize: "18px",
+                fontSize: "15px",
                 fontWeight: 400,
                 fontFamily: "'Inter', sans-serif",
                 color: "#717171",
@@ -301,7 +310,7 @@ const Home = () => {
             </div>
             <p
               style={{
-                fontSize: "18px",
+                fontSize: "15px",
                 fontWeight: 400,
                 fontFamily: "'Inter', sans-serif",
                 color: "#717171",
@@ -314,102 +323,130 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          height: "144.56px",
-          width: "100%",
-          display: "flex",
-          marginTop: "18px",
-
-          justifyContent: "space-around",
-        }}
-      >
-        <div
-          style={{
-            height: "109.84px",
-            width: "147px",
-          }}
-        >
+      <div className="container">
+        <div className="image-container">
           <img src={frame} alt="" />
         </div>
-        <div
-          style={{
-            height: "62.34px",
-            maxWidth: "100%",
-            display: "flex",
-          }}
-        ></div>
-        <div>
-          <div
-            style={{
-              height: "30px",
-              fontWeight: 600,
-              fontFamily: "'Inter', sans-serif",
-              marginTop: "20px",
-              display: "flex",
-              flexDirection: "column",
-
-              color: "#4D4D4D",
-
-              fontSize: "18.92px",
-              gap: "10px",
-              width: "300.65px",
-            }}
-          >
-            {" "}
-            <div style={{ opacity: "60%" }}>
+        <div className="content-container">
+          <div className="text-content">
+            <div className="title">
               The unseen of spending <br />
               years at Pixelgrade
             </div>
-            <div
-              style={{
-                height: "27px",
-                fontWeight: 400,
-                fontFamily: "'Inter', sans-serif",
-
-                color: "#717171",
-                fontSize: "9.67px",
-                width: "300.65px",
-              }}
-            >
+            <div className="description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
               amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
               Pellentesque placerat vestibulum lorem sed porta.
             </div>
-            <button
-              style={{
-                backgroundColor: "#4CAF4F",
-                height: "18.35px",
-                width: "70px",
-                padding: "13.68px",
-                border: "none",
-                borderRadius: "1.34px",
-                color: "white",
-                display: "flex",
-                justifyContent: "center",
-
-                flexDirection: "column",
-                alignItems: "center",
-                marginTop: "10px",
-              }}
-            >
-              <p
-                style={{
-                  lineHeight: "8px",
-                  fontWeight: "400",
-                  fontSize: "8.34px",
-                }}
-              >
-                {" "}
-                Learn More
-              </p>
+            <button className="learn-more-btn">
+              <p className="btn-text">Learn More</p>
             </button>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .container {
+          height: 144.56px;
+          width: 100%;
+          display: flex;
+          margin-top: 18px;
+          justify-content: space-around;
+          flex-wrap: wrap;
+        }
+
+        .image-container {
+          height: 109.84px;
+          width: 147px;
+        }
+
+        .content-container {
+          height: 62.34px;
+          max-width: 100%;
+          display: flex;
+        }
+
+        .text-content {
+          height: 30px;
+          font-weight: 600;
+          font-family: "Inter", sans-serif;
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          color: #4d4d4d;
+          font-size: 18.92px;
+          gap: 10px;
+          width: 300.65px;
+        }
+
+        .title {
+          opacity: 60%;
+        }
+
+        .description {
+          height: 27px;
+          font-weight: 400;
+          font-family: "Inter", sans-serif;
+          color: #717171;
+          font-size: 9.67px;
+          width: 300.65px;
+        }
+
+        .learn-more-btn {
+          background-color: #4caf4f;
+          height: 18.35px;
+          width: 70px;
+          padding: 13.68px;
+          border: none;
+          border-radius: 1.34px;
+          color: white;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 10px;
+        }
+
+        .btn-text {
+          line-height: 8px;
+          font-weight: 400;
+          font-size: 8.34px;
+        }
+
+        @media (max-width: 768px) {
+          .container {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .image-container {
+            max-width: 100%;
+            text-align: center;
+            padding: 10px;
+          }
+
+          .learn-more-btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            background: blue;
+          }
+
+          .btn-text {
+            font-size: 14px;
+          }
+
+          .title {
+            font-size: 16px;
+          }
+
+          .description {
+            font-size: 12px;
+          }
+        }
+      `}</style>
+
       <div style={{ padding: "17px" }}></div>
-      
-    
     </div>
   );
 };

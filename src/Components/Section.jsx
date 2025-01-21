@@ -345,10 +345,7 @@ const Section = ({ data }) => {
         >
           Caring is the new marketing
         </h1>
-        <h4
-         
-         
-        >
+        <h4>
           The Nextcent blog is the best place to read about the latest
           membership insights, trends and more. See who's joining the community,
           read about how our community are increasing their membership income
@@ -372,6 +369,7 @@ const Section = ({ data }) => {
           @media (max-width: 768px) {
             h4 {
               font-size: 16px;
+              flex-wrap: wrap;
             }
           }
         `}</style>

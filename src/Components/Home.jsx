@@ -933,9 +933,9 @@ const Home = ({data}) => {
               width: "300px",
               background: "#fff",
               borderRadius: "10px",
-             
+
               position: "relative",
-              border:'none'
+              border: "none",
             }}
           >
             <img
@@ -952,9 +952,8 @@ const Home = ({data}) => {
                 left: "50%",
                 transform: "translate(-50%, -50%)",
                 width: "70%",
-                background: "#fff",
+                background: "#F5F7FA",
                 padding: "15px",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
                 borderRadius: "5px",
                 textAlign: "center",
               }}
@@ -966,7 +965,7 @@ const Home = ({data}) => {
                   margin: "10px 0",
                   fontFamily: "'Inter', sans-serif",
                   color: "#717171",
-                  opacity:'90%'
+                  opacity: "90%",
                 }}
               >
                 {item.title}

@@ -30,12 +30,13 @@ const Header = () => {
         .header {
           height: 58.76px;
           background: #ffffff;
-          width: 100%;
+          max-width: 100%;
           display: flex;
           align-items: center;
           gap: 5.57px;
           justify-content: flex-end;
           padding: 0 10px;
+          width: 100%;
         }
 
         .logo-section {
@@ -69,14 +70,14 @@ const Header = () => {
         }
 
         .button-container {
-          display: flex;
-          align-items: center;
+          padding: 0;
+          margin: 0;
         }
 
         .register-btn {
           background-color: #4caf4f;
           height: 36px;
-          width: auto;
+          width: 100%;
           max-width: 100%;
           color: white;
           font-family: "Inter", sans-serif;
@@ -85,7 +86,6 @@ const Header = () => {
           white-space: nowrap;
           display: flex;
           align-items: center;
-          padding: 0 10px;
         }
 
         .arrow-icon {
@@ -95,43 +95,44 @@ const Header = () => {
 
         @media (max-width: 768px) {
           .header {
-=            align-items: center;
+            align-items: center;
             justify-content: space-around;
-            padding: 40px;
-            width:100%;
-            display:flex;
-              flex-direction: column-reverse;
-              height:100%
-
-       
+            padding: 0px;
+            width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            background-color: lightblue;
+            height: 10%;
           }
 
           .logo-section {
-             align-items: center;
-            justify-content: space-between;
-            padding: 40px;
+            align-items: start;
             flex-direction: column-reverse;
+            position: relative;
+            bottom: 30px;
+            left: 20%;
+            width: 50%;
+            height: 5px;
           }
 
-        .nav-menu {
-  display: flex;
-  flex-wrap: nowrap;
-  margin-right: 10px;
-  justify-content: space-around;
-  width: 100%;
-}
+          .nav-menu {
+            display: flex;
+            flex-wrap: nowrap;
+            margin-right: 10px;
+            justify-content: space-around;
+            width: 100%;
+          }
 
           .register-btn {
             width: 100%;
             padding: 10px;
-            display:'flex';
-             align-items: flex-end;
+            display: flex;
+            align-items: center;
             justify-content: center;
-                        flex-direction: column;
-position:relative;
-top:140px;
-right:130%;
-
+            flex-direction: column;
+            position: relative;
+            left: 0;
+            margin-top: 10px; /* Optional: Adjust space above the button */
           }
 
           .arrow-icon {

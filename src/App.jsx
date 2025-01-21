@@ -4,6 +4,7 @@ import Home from './Components/Home'
 import img18 from './assets/image 18.png'
 import img19 from './assets/image 19.png'
 import img20 from './assets/image 20.png'
+import Section from './Components/Section'
 
 const App = () => {
   const data = [
@@ -33,6 +34,7 @@ const App = () => {
     <div>
       <Header />
       <Home data={data} />
+      <Section data={data} />
     </div>
   );
 }

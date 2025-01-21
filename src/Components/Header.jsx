@@ -12,7 +12,6 @@ const Header = () => {
         width: "100%",
         display: "flex",
         alignItems: "center",
-        padding: "0 10px",
         gap: "5.57px",
         justifyContent: "flex-end",
       }}
@@ -66,26 +65,24 @@ const Header = () => {
       {/* Register Button */}
       <div
         style={{
-          paddingRight: "9.74px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
+       
         }}
       >
         <button
           style={{
             backgroundColor: "#4CAF4F",
             height: "36px",
-            width: "100%",
+            width: "auto",
+            maxWidth: "100%",
             color: "white",
             fontFamily: "'Inter', sans-serif",
             borderRadius: "2.78px",
             border: "none",
+            whiteSpace: "nowrap",
           }}
         >
-          Register Now{" "}
-          <img src={arrow} alt="arrow" style={{ height: "11.14px" }} />
+          Register Now
+          <img src={arrow} alt="arrow" style={{ height: "11.14px",paddingLeft:'5px' }} />
         </button>
       </div>
     </div>

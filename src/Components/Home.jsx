@@ -20,6 +20,7 @@ import arrow from "../assets/image.png";
 
 
 const Home = ({data}) => {
+  console.log(data, "data=================")
   return (
     <div>
       <div
@@ -925,14 +926,16 @@ const Home = ({data}) => {
         }}
       >
         {data.map((item) => (
+          // console.log(item.image)
           <div
             key={item.id}
             style={{
               width: "300px",
               background: "#fff",
               borderRadius: "10px",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+             
               position: "relative",
+              border:'none'
             }}
           >
             <img
@@ -940,21 +943,19 @@ const Home = ({data}) => {
               alt="Card"
               style={{
                 width: "100%",
-                height: "180px",
                 objectFit: "cover",
               }}
             />
             <div
               style={{
                 position: "relative",
-                top: "50%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
-                width: "90%",
+                width: "70%",
                 background: "#fff",
                 padding: "15px",
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-                borderRadius: "10px",
+                borderRadius: "5px",
                 textAlign: "center",
               }}
             >
@@ -984,21 +985,20 @@ const Home = ({data}) => {
           </div>
         ))}
       </div>
-        <div
-          style={{
-            paddingTop: "20px",
-            textAlign: "center",
-            width: "100%",
-            fontFamily: "'Inter', sans-serif",
-            fontSize: "25.06px",
-            fontWeight: 600,
-            color: "#4D4D4D",
-          }}
-        >
-Pellentesque suscipit fringilla libero eu.  
+      <div
+        style={{
+          paddingTop: "20px",
+          textAlign: "center",
+          width: "100%",
+          fontFamily: "'Inter', sans-serif",
+          fontSize: "25.06px",
+          fontWeight: 600,
+          color: "#4D4D4D",
+        }}
+      >
+        Pellentesque suscipit fringilla libero eu.
+      </div>
     </div>
-    </div>
-    
   );
 };
 

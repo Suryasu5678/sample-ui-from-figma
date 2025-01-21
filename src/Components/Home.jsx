@@ -945,6 +945,8 @@ const Home = ({data}) => {
                 width: "100%",
                 objectFit: "cover",
               }}
+              srcSet={`${item.image} 1000w, ${item.image}?size=500 500w`}
+              sizes="(max-width: 600px) 500px, 1000px"
             />
             <div
               style={{
